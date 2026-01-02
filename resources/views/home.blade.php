@@ -22,7 +22,7 @@
     }
 
     header {
-      background: linear-gradient(135deg, #6c63ff, #928dff);
+      background: #000; 
       color: #fff;
       text-align: center;
       padding: 100px 20px 120px;
@@ -31,6 +31,8 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       position: relative;
       overflow: hidden;
+
+      
     }
 
     header h1 {
@@ -135,6 +137,39 @@
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(87, 75, 255, 0.5);
     }
+
+    /* === Gradiente animado para el H1 del header === */
+header h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+
+  /* Gradiente inicial */
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #42e695, #ff6ec4);
+  background-size: 600% 600%;
+
+  /* Aplicar gradiente solo al texto */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  /* Animación */
+  animation: gradientAnimation 8s ease infinite;
+}
+
+/* Animación del gradiente */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -161,8 +196,8 @@
                 <h4 class="fw-bold mb-3">💻 Diseño Web</h4>
                 <p>Creamos sitios modernos, elegantes y adaptables a cualquier dispositivo.</p>
               </div>
-            </div>
-            <div class="col-md-4 mb-4">
+            </div>  
+            <div class="col-md  -4 mb-4">
               <div class="card-service h-100">
                 <h4 class="fw-bold mb-3">⚙️ Desarrollo</h4>
                 <p>Soluciones personalizadas con tecnologías de última generación.</p>
